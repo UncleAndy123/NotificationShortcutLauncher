@@ -1,0 +1,24 @@
+package com.hmdm.kyocera.notifications;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+
+public class NotificationShortcutActivity extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        try {
+            Intent intent = new Intent();
+            intent.setClassName(
+                "com.android.systemui",
+                "com.android.systemui.kc.notification.NotificationActivity"
+            );
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        finish(); // Don't leave this activity in the back stack
+    }
+}
