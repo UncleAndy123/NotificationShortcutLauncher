@@ -13,7 +13,7 @@ android {
     defaultConfig {
         applicationId = "com.purespeech.notificationshortcutlauncher"
         minSdk = 24
-        targetSdk = 31
+        targetSdk = 33
         versionCode = 1
         versionName = "0.1"
 
