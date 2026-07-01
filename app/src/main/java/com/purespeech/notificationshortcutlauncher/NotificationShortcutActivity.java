@@ -1,4 +1,4 @@
-package com.hmdm.kyocera.notifications;
+package com.purespeech.notificationshortcutlauncher;
 
 import android.app.Activity;
 import android.content.Intent;

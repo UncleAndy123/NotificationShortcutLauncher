@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "com.purespeech.notificationshortcutlauncher"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.purespeech.notificationshortcutlauncher"
@@ -16,18 +12,14 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "0.1"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        versionNameSuffix = "pre_release"
     }
 
     buildTypes {
         release {
-            optimization {
-                enable = false
-            }
+            isMinifyEnabled = false
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
